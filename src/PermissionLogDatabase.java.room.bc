@@ -1,0 +1,12 @@
+package com.android.permissionlogbackup
+
+import androidx.room;
+
+@Database (entities = { PermissionLog.class })
+public abstract class PermissionLogDatabase extends RoomDatabase {
+    final private static PermissionLogDatabase PLDB = Room.databaseBuilder(getApplicationContext(), PermissionLogDatabase.class, "PLDB").build();
+
+    public synchronized static PermissionLogDatabase getPLDB () return PLDB;
+    
+    public abstract PermissionLogDoa permissionLogDoa ();
+}

@@ -1,0 +1,12 @@
+package com.android.permissionlogbackup;
+
+import androidx.room;
+
+@Entity
+public class PermissionLog {
+    
+    @PrimaryKey
+    private int timestamp;
+    
+    private int message;
+}

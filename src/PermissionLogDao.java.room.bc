@@ -1,0 +1,13 @@
+package com.android.permissionlogbackup;
+
+import androidx.room;
+
+@Dao
+public interface PermissionLogDao {
+    
+    @Insert (entity = PermissionLog :: class)
+    void insertPermissionLog (PermissionLog log);
+
+    @Query ("SELECT * FROM PermissionLog")
+    List <PermissionLog> loadAll ()
+}
